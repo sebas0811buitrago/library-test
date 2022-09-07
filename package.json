@@ -10,21 +10,29 @@
   "author": "Source Meridian",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^18.0.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.4",
     "@types/react": "^18.0.17",
-    "eslint-config-react": "^1.1.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@types/rollup-plugin-peer-deps-external": "^2.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "^8.23.0",
+    "eslint-config-react-app": "^7.0.1",
+    "prettier": "2.7.1",
     "react-scripts": "5.0.1",
-    "rollup": "^2.77.3",
+    "rollup": "^2.79.0",
     "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.4.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.2",
+    "typescript-plugin-css-modules": "^3.4.0"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
