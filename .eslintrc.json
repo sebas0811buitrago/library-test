@@ -1,4 +1,4 @@
 {
   "extends": "react-app",
-  "ignorePatterns": ["*.config.js", "*.config.ts", "dist"]
+  "ignorePatterns": ["*.config.js", "*.config.ts", "build"]
 }
