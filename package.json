@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -c --watch"
+    "watch": "rollup -c --watch",
+    "test": "jest"
   },
   "private": true,
   "author": "Source Meridian",
@@ -15,27 +16,36 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-multi-entry": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.4",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@types/jest": "^29.0.0",
     "@types/react": "^18.0.17",
     "@types/rollup-plugin-peer-deps-external": "^2.2.1",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "eslint": "^8.23.0",
     "eslint-config-react-app": "^7.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.2",
     "prettier": "2.7.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "react-test-renderer": "^18.0.0",
     "rollup": "^2.79.0",
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
+    "ts-jest": "^28.0.8",
     "tslib": "^2.4.0",
     "typescript": "^4.8.2",
     "typescript-plugin-css-modules": "^3.4.0"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "module": "dist/index.js",
   "files": [
     "dist"
   ],

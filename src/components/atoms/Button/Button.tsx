@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 // Inject to `<head>` and also available as `style`
 import "./global.css";
 import style from "./Button.module.css";
+import useCounter from "../../../hooks/useCounter";
 export interface ButtonProps {
   label: string;
 }
@@ -13,6 +14,8 @@ export interface ButtonProps {
 const Button = (props: ButtonProps) => {
   const [count, setCount] = useState(0);
 
+  const result = useCounter();
+  console.log(result);
   console.log("count change", count);
 
   useEffect(() => {
@@ -26,7 +29,6 @@ const Button = (props: ButtonProps) => {
         setCount((state) => state + 1);
       }}
     >
-      holaaa
       {props.label}
     </button>
   );
