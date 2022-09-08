@@ -3,17 +3,10 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
-import multi from "@rollup/plugin-multi-entry";
 
 export default [
   {
-    input: [
-      "src/index.ts",
-      "src/components/atoms/Button/index.ts"
-      // "src/**/**/index.ts",
-      // "src/**/**/**/index.ts",
-      // "src/**/**/**/**/index.ts"
-    ],
+    input: ["src/index.ts", "src/components/atoms/Button/index.ts"],
 
     output: [
       {
@@ -25,7 +18,6 @@ export default [
       }
     ],
     plugins: [
-      // multi({ entryFileName: "index.js" }),
       peerDepsExternal(),
       resolve(),
       commonjs(),
