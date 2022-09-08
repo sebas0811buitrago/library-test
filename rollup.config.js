@@ -6,7 +6,7 @@ import postcss from "rollup-plugin-postcss";
 
 export default [
   {
-    input: ["src/index.ts", "src/components/atoms/Button/index.ts"],
+    input: ["src/index.ts"],
 
     output: [
       {
