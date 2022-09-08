@@ -4,6 +4,8 @@ import typescript from "@rollup/plugin-typescript";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 
+const production = !process.env.ROLLUP_WATCH;
+
 export default [
   {
     input: ["src/index.ts", "src/components/atoms/Button/index.ts"],
@@ -12,7 +14,7 @@ export default [
       {
         dir: "build",
         format: "esm",
-        sourcemap: true,
+        sourcemap: !production,
         preserveModules: true,
         preserveModulesRoot: "src"
       }
