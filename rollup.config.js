@@ -6,15 +6,18 @@ import postcss from "rollup-plugin-postcss";
 
 export default [
   {
-    input: "src/index.ts",
+    input: ["src/index.ts", "src/components/atoms/Button/index.ts"],
 
     output: [
       {
-        file: "build/index.js",
+        dir: "build",
         format: "esm",
-        sourcemap: true
+        sourcemap: true,
+        preserveModules: true,
+        preserveModulesRoot: "src"
       }
     ],
+
     plugins: [
       peerDepsExternal(),
       resolve(),
