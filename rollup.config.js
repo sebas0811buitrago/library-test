@@ -7,34 +7,37 @@ import dts from "rollup-plugin-dts";
 
 export default [
   {
-    input: "src/index.ts",
+    input: ["src/index.ts", "src/components/atoms/Button/index.ts"],
 
     output: [
       {
-        file: "build/index.js",
+        dir: "build",
         format: "esm",
-        sourcemap: true
+        sourcemap: true,
+        preserveModules: true
       }
     ],
+    // preserveModules: true,
+
     plugins: [
       peerDepsExternal(),
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss({
+        inject: true,
+
         modules: true,
+        // autoModules: true
         extensions: ["module.css"]
       }),
       postcss({
+        inject: true,
+
         extensions: [".css"]
       })
-    ]
-  },
+    ],
 
-  {
-    input: "build/index.d.ts",
-    output: [{ file: "build/index.d.ts", format: "esm" }],
-    plugins: [dts()],
-    external: [/\.css$/]
+    external: ["node_modules", "src"]
   }
 ];
