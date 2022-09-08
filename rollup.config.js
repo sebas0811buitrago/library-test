@@ -29,12 +29,5 @@ export default [
         extensions: [".css"]
       })
     ]
-  },
-
-  {
-    input: "build/index.d.ts",
-    output: [{ file: "build/index.d.ts", format: "esm" }],
-    plugins: [dts()],
-    external: [/\.css$/]
   }
 ];
