@@ -8,8 +8,8 @@ import multi from "@rollup/plugin-multi-entry";
 export default [
   {
     input: [
-      "src/index.ts"
-      // "src/**/index.ts",
+      "src/index.ts",
+      "src/components/atoms/Button/index.ts"
       // "src/**/**/index.ts",
       // "src/**/**/**/index.ts",
       // "src/**/**/**/**/index.ts"
@@ -19,12 +19,13 @@ export default [
       {
         dir: "build",
         format: "esm",
-        sourcemap: true
-        // preserveModules: true
+        sourcemap: true,
+        preserveModules: true,
+        preserveModulesRoot: "src"
       }
     ],
     plugins: [
-      // multi(),
+      // multi({ entryFileName: "index.js" }),
       peerDepsExternal(),
       resolve(),
       commonjs(),

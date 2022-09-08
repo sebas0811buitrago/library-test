@@ -29,6 +29,7 @@ const Button = (props: ButtonProps) => {
         setCount((state) => state + 1);
       }}
     >
+      adios
       {props.label}
     </button>
   );
