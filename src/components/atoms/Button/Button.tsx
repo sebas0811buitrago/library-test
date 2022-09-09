@@ -29,7 +29,6 @@ const Button = (props: ButtonProps) => {
         setCount((state) => state + 1);
       }}
     >
-      test
       {props.label}
     </button>
   );

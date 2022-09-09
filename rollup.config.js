@@ -8,7 +8,12 @@ const production = !process.env.ROLLUP_WATCH;
 
 export default [
   {
-    input: ["src/index.ts", "src/components/atoms/Button/index.ts"],
+    input: [
+      "src/index.ts",
+      "src/components/index.ts",
+      "src/components/atoms/index.ts",
+      "src/components/atoms/Button/index.ts"
+    ],
 
     output: [
       {
